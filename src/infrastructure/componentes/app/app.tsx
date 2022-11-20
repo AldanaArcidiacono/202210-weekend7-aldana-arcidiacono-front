@@ -1,5 +1,15 @@
-import './app.css';
+import { AppRoutes } from "../app.routes/app.routes";
+import { Layout } from "../layout/layout";
+import "./app.css";
 
-export function App() {
-    return <div className="app">Probando</div>;
+function App() {
+    return (
+        <div className="App">
+            <Layout>
+                <AppRoutes></AppRoutes>
+            </Layout>
+        </div>
+    );
 }
+
+export default App;
