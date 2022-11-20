@@ -1,5 +1,5 @@
 import { Robot } from "../../../entities/robots";
-import { FavRobotItem } from "../fav.robot.item/fav.robot.item";
+import { FavoriteRobotItem } from "../fav.robot.item/fav.robot.item";
 import styles from "./fav.robot.list.module.css";
 
 export function FavRobotList({ item }: { item: Robot[] }) {
@@ -9,7 +9,7 @@ export function FavRobotList({ item }: { item: Robot[] }) {
             <ul>
                 {item.map((item: Robot) => (
                     <li key={item.id}>
-                        <FavRobotItem item={item}></FavRobotItem>
+                        <FavoriteRobotItem item={item}></FavoriteRobotItem>
                     </li>
                 ))}
             </ul>

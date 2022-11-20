@@ -1,6 +1,6 @@
 import { Robot } from "../../../entities/robots";
 
-export function FavRobotItem({ item }: { item: Robot }) {
+export function FavoriteRobotItem({ item }: { item: Robot }) {
     return (
         <>
             <h3>{item.name}</h3>
