@@ -1,4 +1,4 @@
-import { RobotList } from "../components/favorites.robot.list/fav.robot.list/fav.robot.list";
+import { RobotList } from "../components/home.robot.list/robot.list/robot.list";
 import { useRobot } from "../hooks/userobot";
 import styles from "./home.page.module.css";
 

@@ -1,13 +1,15 @@
 import { Robot } from "../../../entities/robots";
-import { RobotItem } from "../fav.robot.item/fav.robot.item";
+import { FavRobotItem } from "../fav.robot.item/fav.robot.item";
+import styles from "./fav.robot.list.module.css";
 
-export function RobotList({ item }: { item: Robot[] }) {
+export function FavRobotList({ item }: { item: Robot[] }) {
     return (
         <div>
+            <h3 className={styles.favRobot__title}>Lista de robots</h3>
             <ul>
                 {item.map((item: Robot) => (
                     <li key={item.id}>
-                        <RobotItem item={item}></RobotItem>
+                        <FavRobotItem item={item}></FavRobotItem>
                     </li>
                 ))}
             </ul>
