@@ -1,15 +1,22 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import { App } from './infrastructure/componentes/app/app';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import reportWebVitals from "./reportWebVitals";
+import { MemoryRouter as Router } from "react-router-dom";
+import { appStore } from "./infrastructure/store/store";
+import "./index.css";
+import App from "./infrastructure/componentes/app/app";
 
 const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+    document.getElementById("root") as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <App />
+        <Router>
+            <Provider store={appStore}>
+                <App />
+            </Provider>
+        </Router>
     </React.StrictMode>
 );
 
