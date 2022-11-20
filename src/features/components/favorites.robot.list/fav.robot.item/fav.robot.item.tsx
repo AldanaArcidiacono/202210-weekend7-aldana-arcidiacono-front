@@ -3,8 +3,12 @@ import { Robot } from "../../../entities/robots";
 export function FavRobotItem({ item }: { item: Robot }) {
     return (
         <>
-            <p>{item.name}</p>
-            <img src={item.img} alt={"Image of" + item.name} height="300" />
+            <h3>{item.name}</h3>
+            <img
+                src={item.img}
+                alt={"Image of the robot" + item.name}
+                height="300"
+            />
         </>
     );
 }
