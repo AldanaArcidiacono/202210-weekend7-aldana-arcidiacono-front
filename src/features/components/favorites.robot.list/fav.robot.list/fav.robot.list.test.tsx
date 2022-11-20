@@ -1,9 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom";
+import { Provider } from "react-redux";
+import { appStore } from "../../../../infrastructure/store/store";
 import { FavRobotList } from "./fav.robot.list";
 
-describe("Given the RobotList component", () => {
+describe("Given the FavoriteRobotItem component", () => {
     describe("When we render the component", () => {
         test("then it should display the Robot's list", () => {
             const mockRobot = [
@@ -19,7 +21,9 @@ describe("Given the RobotList component", () => {
             render(
                 <>
                     <Router>
-                        <FavRobotList item={mockRobot}></FavRobotList>
+                        <Provider store={appStore}>
+                            <FavRobotList item={mockRobot} />
+                        </Provider>{" "}
                     </Router>
                 </>
             );

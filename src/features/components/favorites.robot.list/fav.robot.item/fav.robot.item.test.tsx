@@ -7,16 +7,16 @@ import { FavoriteRobotItem } from "./fav.robot.item";
 
 jest.mock("../../../hooks/userobot");
 
-describe("Given RobotItem component", () => {
+describe("Given FavoriteRobotItem component", () => {
     describe("When we render the component", () => {
         test("Then it should display", async () => {
             const mockRobot = {
-                id: "as12df3",
-                name: "Pepe",
-                img: "url.img",
-                speed: 5,
-                strength: 4,
-                creationDate: "05/85",
+                id: "a4s5d6",
+                name: "Ernesto",
+                img: "url.img.png",
+                speed: 10,
+                strength: 2,
+                creationDate: "07/08",
             };
 
             (useRobot as jest.Mock).mockReturnValue({
@@ -30,7 +30,7 @@ describe("Given RobotItem component", () => {
                     </Provider>
                 </Router>
             );
-            const element = await screen.findByText(/Pepe/i);
+            const element = await screen.findByText(/Ernesto/i);
             expect(element).toBeInTheDocument();
         });
     });

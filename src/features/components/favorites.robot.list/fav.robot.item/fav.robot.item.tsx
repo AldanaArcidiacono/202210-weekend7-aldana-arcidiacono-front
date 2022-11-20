@@ -6,7 +6,7 @@ export function FavoriteRobotItem({ item }: { item: Robot }) {
             <h3>{item.name}</h3>
             <img
                 src={item.img}
-                alt={"Image of the robot" + item.name}
+                alt={"Image of the robot " + item.name}
                 height="300"
             />
         </>
