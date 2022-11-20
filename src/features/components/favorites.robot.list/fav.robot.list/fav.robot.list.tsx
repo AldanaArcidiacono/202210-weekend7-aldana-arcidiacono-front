@@ -8,7 +8,7 @@ export function FavRobotList({ item }: { item: Robot[] }) {
             <h3 className={styles.favRobot__title}>Lista de robots</h3>
             <ul>
                 {item.map((item: Robot) => (
-                    <li key={item.id}>
+                    <li className={styles.favRobot__list} key={item.id}>
                         <FavoriteRobotItem item={item}></FavoriteRobotItem>
                     </li>
                 ))}
