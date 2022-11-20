@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { MemoryRouter as Router } from "react-router-dom";
 import { appStore } from "../../../../infrastructure/store/store";
 import { useRobot } from "../../../hooks/userobot";
-import { RobotItem } from "./robot.item";
+import { FavRobotItem } from "../../favorites.robot.list/fav.robot.item/fav.robot.item";
 
 jest.mock("../../../hooks/userobot");
 
@@ -16,7 +16,7 @@ describe("Given RobotItem component", () => {
                 img: "url.img",
                 speed: 5,
                 strength: 4,
-                creationDate: "05/85",
+                creationDate: "06/78",
             };
 
             (useRobot as jest.Mock).mockReturnValue({
@@ -26,7 +26,7 @@ describe("Given RobotItem component", () => {
             render(
                 <Router>
                     <Provider store={appStore}>
-                        <RobotItem item={mockRobot} />
+                        <FavRobotItem item={mockRobot} />
                     </Provider>
                 </Router>
             );

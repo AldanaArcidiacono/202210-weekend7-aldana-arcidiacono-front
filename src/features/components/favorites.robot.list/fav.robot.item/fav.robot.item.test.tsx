@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { MemoryRouter as Router } from "react-router-dom";
 import { appStore } from "../../../../infrastructure/store/store";
 import { useRobot } from "../../../hooks/userobot";
-import { RobotItem } from "./fav.robot.item";
+import { FavRobotItem } from "./fav.robot.item";
 
 jest.mock("../../../hooks/userobot");
 
@@ -26,7 +26,7 @@ describe("Given RobotItem component", () => {
             render(
                 <Router>
                     <Provider store={appStore}>
-                        <RobotItem item={mockRobot} />
+                        <FavRobotItem item={mockRobot} />
                     </Provider>
                 </Router>
             );

@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import "@testing-library/jest-dom";
-import { RobotList } from "./fav.robot.list";
+import { FavRobotList } from "./fav.robot.list";
 
 describe("Given the RobotList component", () => {
     describe("When we render the component", () => {
@@ -19,7 +19,7 @@ describe("Given the RobotList component", () => {
             render(
                 <>
                     <Router>
-                        <RobotList item={mockRobot}></RobotList>
+                        <FavRobotList item={mockRobot}></FavRobotList>
                     </Router>
                 </>
             );
