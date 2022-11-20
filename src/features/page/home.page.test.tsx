@@ -1,21 +1,23 @@
 import { render, screen } from "@testing-library/react";
-import { Provider } from "react-redux";
-import { appStore } from "../../store/store";
 import { MemoryRouter as Router } from "react-router-dom";
+import HomePage from "./home.page";
 import "@testing-library/jest-dom";
-import App from "./app";
+import { Provider } from "react-redux";
+import { appStore } from "../../infrastructure/store/store";
 
-describe("Given App component", () => {
+describe("Given Home component", () => {
     describe("When we render the component", () => {
-        test("Then it should display the title", () => {
+        beforeEach(() => {
             render(
                 <Router>
                     <Provider store={appStore}>
-                        <App />
+                        <HomePage />
                     </Provider>
                 </Router>
             );
-            const element = screen.getByText(/Aldana/i);
+        });
+        test("Then it should display the title", () => {
+            const element = screen.getByText(/Inicio/i);
             expect(element).toBeInTheDocument();
         });
     });
